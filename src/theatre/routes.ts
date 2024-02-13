@@ -1,5 +1,11 @@
 import { Router } from "express";
-import { createTheatre, getAllTheatres, getTheatreById, deleteTheatre, updateTheatre } from "./controllers/theatreController.ts";
+import {
+  createTheatre,
+  getAllTheatres,
+  getTheatreById,
+  deleteTheatre,
+  updateTheatre,
+} from './controllers/theatreController.js';
 
 const router = Router();
 

@@ -5,6 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
+    "prestart": "npm run db:migrate",
     "dev": "nodemon --exec ts-node src/app.ts",
     "studio": "prisma studio",
     "lint": "eslint . --ext .ts",

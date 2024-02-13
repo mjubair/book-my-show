@@ -1,6 +1,11 @@
 // Import the necessary modules
 import express from 'express';
-import { getAllScreens, getScreenById, createScreen, deleteScreen } from './controllers/screenController.ts';
+import {
+  getAllScreens,
+  getScreenById,
+  createScreen,
+  deleteScreen,
+} from './controllers/screenController';
 
 // Create an instance of the Express Router
 const router = express.Router();

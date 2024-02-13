@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getAllShows, createShow } from "./controllers/show.controllers.ts";
+import { getAllShows, createShow } from './controllers/show.controllers';
 
 const router = Router();
 

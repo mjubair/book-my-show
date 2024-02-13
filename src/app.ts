@@ -1,8 +1,8 @@
 import express, { Request, Response, Express } from 'express'
-import theatreRouter from './theatre/routes.ts'
-import movieRouter from './movie/routes.ts';
-import screenRouter from './screen/routes.ts';
-import showRouter from './show/routes.ts';
+import theatreRouter from './theatre/routes';
+import movieRouter from './movie/routes';
+import screenRouter from './screen/routes';
+import showRouter from './show/routes';
 
 const app: Express = express()
 

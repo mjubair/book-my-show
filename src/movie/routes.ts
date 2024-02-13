@@ -5,7 +5,7 @@ import {
   getMovieById,
   deleteMovie,
   updateMovie,
-} from './controllers/movie.controllers.ts';
+} from './controllers/movie.controllers';
 
 const router = Router();
 
