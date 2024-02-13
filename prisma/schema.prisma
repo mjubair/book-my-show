@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Theatre {
+  id Int @id @default(autoincrement())
+  name String
+  address String
+  website String
+  phone String
+  lat String
+  lng String
+  isDeleted Boolean @default(false)
+  Screen Screen[]
+}
+
+model Screen {
+  id Int @id @default(autoincrement())
+  theatre Theatre @relation(fields: [theatreId], references: [id])
+  theatreId Int
+  seatCount Int
+  seatConfiguration String
+  isDeleted Boolean @default(false)
+  show Show[]
+}
+
+model Movie {
+  id Int @id @default(autoincrement())
+  title String
+  description String
+  duration Int
+  rating Float
+  genre String
+  director String
+  poster String
+  isDeleted Boolean @default(false)
+  show Show[]
+}
+
+model Show {
+  id Int @id @default(autoincrement())
+  datetime DateTime
+  screen Screen @relation(fields: [screenId], references: [id])
+  screenId Int
+  movie Movie @relation(fields: [movieId], references: [id])
+  movieId Int
+  isDeleted Boolean @default(false)
+}
+
