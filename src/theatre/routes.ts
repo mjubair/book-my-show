@@ -5,7 +5,7 @@ import {
   getTheatreById,
   deleteTheatre,
   updateTheatre,
-} from './controllers/theatreController.js';
+} from './controllers/theatreController';
 
 const router = Router();
 
